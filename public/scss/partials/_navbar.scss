@@ -12,7 +12,6 @@ body {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 16px;
 
   a {
     padding: 8px 8px 8px 32px;
@@ -56,14 +55,14 @@ body {
 }
 
 // Media breakpoint hide sidenav on 991 width
-@media only screen and (max-width:991px){
-  .content-wrapper {
-    margin-left:0;
-  }
-  .offcanvas {
-    width: 0;
-  }
-  .hamburger-button {
-    display: block;
-  }
-}
+// @media only screen and (max-width:991px){
+//   .content-wrapper {
+//     margin-left:0;
+//   }
+//   .offcanvas {
+//     width: 0;
+//   }
+//   .hamburger-button {
+//     display: block;
+//   }
+// }

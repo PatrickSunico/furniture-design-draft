@@ -13,7 +13,6 @@ body {
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-top: 16px;
 }
 
 .sidenav a {
@@ -54,16 +53,4 @@ body {
 .hamburger-button {
   font-size: 30px;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 991px) {
-  .content-wrapper {
-    margin-left: 0;
-  }
-  .offcanvas {
-    width: 0;
-  }
-  .hamburger-button {
-    display: block;
-  }
 }
