@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Furniture Design</title>
@@ -19,16 +19,19 @@
 <body>
     <div id="wrapper"> <!-- main wrapper-->
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <div class="sidebar-nav">
-                <a class="sidebar-brand" href="#">
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                  <a href="#">
                     <!-- <img src="" alt=""> -->
                     <?php include "includes/icons/couch.php" ?>
-                </a>
-                <a href="">About</a>
-                <a href="">Services</a>
-                <a href="">Clients</a>
-                <a href="">Contact</a>
-            </div>
-        </div>
+                  </a>
+                </li>
+
+                <li> <a href="">About</a> </li>
+                <li> <a href="">Services</a></li>
+                <li><a href="">Clients</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
         <!-- /#sidebar-wrapper -->

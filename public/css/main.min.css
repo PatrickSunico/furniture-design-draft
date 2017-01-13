@@ -2,6 +2,8 @@
 html, body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* typography*/
@@ -14,13 +16,19 @@ html, body {
 .h1 {
   font-weight: 700;
   margin-bottom: 100px;
-  letter-spacing: 2;
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.h2 {
+  letter-spacing: 4px;
+  margin-bottom: 40px;
 }
 
 /* underlined style class*/
 .h2.h2__underlined {
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 16px;
   position: relative;
 }
 
@@ -31,7 +39,13 @@ html, body {
   height: 1px;
   bottom: 0;
   left: 0%;
-  border-bottom: 1px solid red;
+  border-bottom: 4px solid black;
+}
+
+.p {
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Toggle Styles */
@@ -39,6 +53,7 @@ html, body {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  overflow-x: hidden;
 }
 
 #wrapper.toggled {
@@ -66,10 +81,12 @@ html, body {
 #page-content-wrapper {
   position: absolute;
   padding: 15px;
+  overflow-x: hidden;
 }
 
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
+  overflow-x: hidden;
 }
 
 /* Sidebar Styles */
@@ -83,30 +100,30 @@ html, body {
   list-style: none;
 }
 
-/*new code*/
-.sidebar-nav a {
+.sidebar-nav li a {
   display: block;
   text-decoration: none;
   padding-left: 32px;
-  color: #818181;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: 20px auto;
   font-size: 18px;
+  color: #fff;
 }
 
-.sidebar-nav a:first-child {
+.sidebar-nav .sidebar-brand {
   margin: 120px auto;
 }
 
 .sidebar-nav a:hover {
-  color: #f1f1f1;
+  color: #818181;
 }
 
 /* Desktop View*/
 @media only screen and (min-width: 768px) {
   #wrapper {
     padding-left: 250px;
+    overflow-x: hidden;
   }
   #wrapper.toggled {
     padding-left: 0;
@@ -118,8 +135,9 @@ html, body {
     width: 0;
   }
   #page-content-wrapper {
-    padding: 60px 40px;
+    padding: 15px 40px;
     position: relative;
+    overflow-x: hidden;
   }
   #wrapper.toggled #page-content-wrapper {
     position: relative;
@@ -131,4 +149,8 @@ html, body {
 #page-content-wrapper #menu-toggle {
   cursor: pointer;
   font-size: 30px;
+}
+
+.row-spacing {
+  margin: 20px auto;
 }

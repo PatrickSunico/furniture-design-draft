@@ -1,10 +1,12 @@
 /* Toggle Styles */
+// Main Wrapper
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  overflow-x: hidden;
 }
 
 #wrapper.toggled {
@@ -31,13 +33,16 @@
   width: 250px;
 }
 
+// page content wrapper
 #page-content-wrapper {
   position: absolute;
   padding: 15px;
+  overflow-x: hidden;
 }
 
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
+  overflow-x: hidden;
 }
 
 /* Sidebar Styles */
@@ -49,30 +54,32 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
-/*new code*/
-.sidebar-nav a {
-  display: block;
-  text-decoration: none;
-  padding-left: 32px;
-  color: #818181;
-  transition: 0.3s;
-  margin: 20px auto;
-  font-size: 18px;
+  li a {
+    display: block;
+    text-decoration: none;
+    padding-left: 32px;
+    transition: 0.3s;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #fff;
+  }
 }
 
-.sidebar-nav a:first-child {
+.sidebar-nav .sidebar-brand {
   margin: 120px auto;
 }
 
 .sidebar-nav a:hover {
-  color: #f1f1f1;
+  // color: #f1f1f1;
+  color: #818181;
+
 }
 
 /* Desktop View*/
 @media only screen and (min-width: 768px){
     #wrapper {
         padding-left: 250px;
+        overflow-x: hidden;
     }
 
     #wrapper.toggled {
@@ -88,8 +95,9 @@
     }
 
     #page-content-wrapper {
-        padding: 60px 40px;
+        padding: 15px 40px;
         position: relative;
+        overflow-x: hidden
     }
 
     #wrapper.toggled #page-content-wrapper {
