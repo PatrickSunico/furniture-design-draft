@@ -1,22 +1,27 @@
 <?php
   include('includes/header.php');
 ?>
-  <!-- Main Content Here -->
-  <div class="content-wrapper">
-    <span class="hamburger-button">
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+      <span href="#menu-toggle" id="menu-toggle">
       &#9776;
     </span>
-    <h2>Sidenav Push Example</h2>
-    <p>Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Proin eget tortor risus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-  </div>
+      <!-- Underlined text header -->
+      <h1 class="h1">Furniture Design</h1>
 
-  <div class="offcanvas sidenav">
-    <a href="#">Logo</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+      <h2 class="h2 h2__underlined">About</h2>
+      <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens,
+          the page content will be pushed off canvas.</p>
+      <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+
+      <h2 class="h2 h2__underlined">Services</h2>
+      <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens,
+          the page content will be pushed off canvas.</p>
+      <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+
+
   </div>
+  <!-- /#page-content-wrapper -->
 
 <?php
   include('includes/footer.php');

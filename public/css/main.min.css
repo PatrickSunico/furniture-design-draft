@@ -1,56 +1,134 @@
-body {
-  font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
+/* typography*/
+/* typography reset*/
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  font-weight: 700;
+  margin-bottom: 100px;
+  letter-spacing: 2;
+}
+
+/* underlined style class*/
+.h2.h2__underlined {
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.h2.h2__underlined:before {
+  content: "";
   position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 1px solid red;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+/* Toggle Styles */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*new code*/
+.sidebar-nav a {
   display: block;
+  text-decoration: none;
+  padding-left: 32px;
+  color: #818181;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: 20px auto;
   font-size: 18px;
 }
 
-.sidenav a:hover {
+.sidebar-nav a:first-child {
+  margin: 120px auto;
+}
+
+.sidebar-nav a:hover {
   color: #f1f1f1;
 }
 
-.content-wrapper {
-  -webkit-transition: margin-left .5s;
-  transition: margin-left .5s;
-  padding: 16px;
-  margin-left: 250px;
+/* Desktop View*/
+@media only screen and (min-width: 768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+  #page-content-wrapper {
+    padding: 60px 40px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
 }
 
-.offcanvas {
-  width: 250px;
-}
-
-.hideSidenav {
-  width: 0;
-}
-
-.wrapper-no_margin {
-  margin-left: 0;
-}
-
-.hamburger-button {
-  font-size: 30px;
+/* mobile */
+#page-content-wrapper #menu-toggle {
   cursor: pointer;
+  font-size: 30px;
 }

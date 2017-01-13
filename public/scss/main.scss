@@ -1,4 +1,6 @@
 // Mixins
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 @import 'mixins/mixins';
 
 //vendor
@@ -7,6 +9,6 @@
 // @import 'mixins/animations';
 
 // Globals
-
+@import 'partials/global';
 // Partials
-@import 'partials/navbar.scss';
+@import 'partials/layout';
