@@ -15,7 +15,7 @@ html, body {
 
 .h1 {
   font-weight: 700;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   margin-top: 40px;
   letter-spacing: 2px;
 }
@@ -149,6 +149,10 @@ html, body {
 #page-content-wrapper #menu-toggle {
   cursor: pointer;
   font-size: 30px;
+}
+
+.section-spacing {
+  margin: 100px auto;
 }
 
 .row-spacing {
