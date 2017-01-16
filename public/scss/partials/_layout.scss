@@ -21,7 +21,7 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #000;
+  background: #414B52;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -76,7 +76,7 @@
 }
 
 /* Desktop View*/
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 991px){
     #wrapper {
         padding-left: 250px;
         overflow-x: hidden;
@@ -109,12 +109,20 @@
 /* mobile */
 
   #page-content-wrapper #menu-toggle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 15px;
+    margin: 15px auto;
+    // position: absolute;
+    // top: 0px;
+    // right: -60px;
     cursor: pointer;
-    font-size: 30px;
+    // font-size: 30px;
+    span {
+      height: 2px;
+      background: #111;
+      margin-bottom: 5px;
+      display: block;
+    }
   }
-
-.section-spacing {
-  margin: 100px auto;
-  // margin-top: 100px;
-  // margin-bottom: 100px;
-}

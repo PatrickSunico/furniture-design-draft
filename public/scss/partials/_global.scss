@@ -1,4 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// .clear {
+//   clear: both;
+// }
+
 html,body {
+  -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -24,13 +35,18 @@ html,body {
   margin-bottom: 40px;
 }
 
+.h3 {
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
 /* underlined style class*/
-.h2.h2__underlined {
+.underlined__black {
   display: inline-block;
   padding-bottom: 16px;
   position: relative;
 }
-.h2.h2__underlined:before{
+.underlined__black:before{
     content: "";
     position: absolute;
     width: 100%;
@@ -44,4 +60,10 @@ html,body {
   font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
+}
+
+
+.section-spacing {
+  margin: 100px auto;
+  @include clearfix;
 }

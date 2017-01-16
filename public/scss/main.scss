@@ -5,7 +5,7 @@
 
 //vendor
 // vendor partials i.e
-// @import 'vendor/bourbon/bourbon';
+@import 'vendor/bourbon/bourbon';
 // @import 'mixins/animations';
 
 // Globals
@@ -13,3 +13,4 @@
 // Partials
 @import 'partials/layout';
 @import 'partials/sections';
+@import 'partials/showcase';
