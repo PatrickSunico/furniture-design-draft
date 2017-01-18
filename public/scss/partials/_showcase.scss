@@ -1,12 +1,3 @@
-
-
-.showcase-wrapper {
-  width: 100%;
-  float: left;
-  overflow-x: hidden;
-  @include clearfix;
-}
-
  div.thumb-unit {
   display: inline-block;
   width: 100%;
@@ -138,7 +129,6 @@ div.thumb-unit .text-overlay p {
   display: inline-block;
   @include clearfix;
 
-
   .ghost-button {
       padding: 18px 24px;
       border: solid #fff 1px;
@@ -147,7 +137,7 @@ div.thumb-unit .text-overlay p {
       text-transform: uppercase;
       border-radius: 0;
       color: #fff;
-      transition: all 0.2s ease-in;
+      @include transition(0.2s ease-in);
       text-decoration: none;
       &:hover {
         color: white;

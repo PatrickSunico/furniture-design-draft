@@ -66,7 +66,7 @@
 }
 
 .sidebar-nav .sidebar-brand {
-  margin: 120px auto;
+  margin: 120px 0 80px 0;
 }
 
 .sidebar-nav a:hover {
@@ -75,8 +75,8 @@
 
 }
 
-/* Desktop View*/
-@media only screen and (min-width: 991px){
+/* Desktop View + side nav breakpoint*/
+@media only screen and (min-width: 1200px){
     #wrapper {
         padding-left: 250px;
         overflow-x: hidden;
@@ -95,7 +95,7 @@
     }
 
     #page-content-wrapper {
-        padding: 15px 40px;
+        padding: 30px 30px;
         position: relative;
         overflow-x: hidden
     }
