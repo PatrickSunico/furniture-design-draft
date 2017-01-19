@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 // .clear {
 //   clear: both;
 // }
@@ -30,15 +36,12 @@ html,body {
   letter-spacing: 2px;
 }
 
-.h2 {
+.h2, .h3 {
   letter-spacing: 4px;
   margin-bottom: 40px;
 }
 
-.h3 {
-  letter-spacing: 4px;
-  margin-bottom: 40px;
-}
+
 
 /* underlined style class*/
 .underlined__black {
@@ -65,5 +68,6 @@ html,body {
 
 .section-spacing {
   margin: 100px auto;
+  padding: 1rem;
   @include clearfix;
 }
