@@ -14,13 +14,17 @@
             <img class="img-portfolio" src="assets/Couch-set.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h3 class="h3"> Test 123</h3>
+              <h4 class="showcase__heading">Couch Set</h4>
+              <h4 class="showcase__heading">ABC Furniture</h4>
+              <div class="btn-position">
+                <a href="" class="ghost-button">View More</a>
+              </div>
             </div>
           </div>
 
           <!-- Description -->
           <div class="card__description">
-            <div class="card__title">Flex</div>
+            <h3 class="h3">Flex</h3>
             <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
           </div>
         </div>
@@ -35,13 +39,17 @@
             <img class="img-portfolio" src="assets/Couch-set.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h3 class="h3"> Test 123</h3>
+              <h4 class="showcase__heading">Couch Set</h4>
+              <h4 class="showcase__heading">ABC Furniture</h4>
+              <div class="btn-position">
+                <a href="" class="ghost-button">View More</a>
+              </div>
             </div>
           </div>
 
           <!-- Description -->
           <div class="card__description">
-            <div class="card__title">Flex</div>
+            <h3 class="h3">Flex</h3>
             <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
           </div>
         </div>
@@ -56,13 +64,19 @@
             <img class="img-portfolio" src="assets/Couch-set.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h3 class="h3"> Test 123</h3>
+
+              <h4 class="showcase__heading">Couch Set</h4>
+              <h4 class="showcase__heading">ABC Furniture</h4>
+              <div class="btn-position">
+                <a href="" class="ghost-button">View More</a>
+              </div>
+
             </div>
           </div>
 
           <!-- Description -->
           <div class="card__description">
-            <div class="card__title">Flex</div>
+            <h3 class="h3">Flex</h3>
             <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
           </div>
         </div>

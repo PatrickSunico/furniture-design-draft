@@ -1,9 +1,4 @@
 
-img {
-  height: auto;
-  width: 100%;
-  vertical-align: middle;
-}
 
 // Card Layout
 .cards {
@@ -14,153 +9,203 @@ img {
   margin: 0;
   padding: 0;
 }
+
 .cards__item {
   @include display(flex);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  
-  /* Default for mobile */
+  /* Default size when resized for mobile */
   width: 100%;
 }
 
+// Base Layout
+.card {
+  background-color: white;
+  // Card Box Shadow
+  // box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  @include display(flex);
+  @include box-orient(vertical);
+  @include box-direction(normal);
+  @include flex-direction(column);
+  overflow: hidden;
+  /* Default size when resized for mobile */
+  width: 100%;
 
-
-
-/* Desktop View */
-@media only screen and (min-width:1200px){
-  /*splits three columns less than 1200px changes into default 100% as one column */
-  .cards__item {
-    width: 33.3333%;
-    // padding-right: 1rem;
+  .card__image {
+    @include filter(contrast(90%));
+    overflow: hidden;
+    position: relative;
+    img {
+      height: auto;
+      width: 100%;
+      vertical-align: middle;
+    }
   }
 }
 
+
 // Card Description
 .card__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  @include display(flex);
+  @include flex(1 1 auto);
+  @include box-direction(vertical);
+  @include box-orient(vertical);
+  @include flex-direction(column);
   padding: 1rem;
-}
-
-.card__image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-filter: contrast(70%);
-          filter: contrast(70%);
-  overflow: hidden;
-  position: relative;
-}
-
-
-.card__title {
-  color: #000;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.card__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+  .card__text {
+    @include flex(1 1 auto);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 // End
 
 
-.card {
-  background-color: white;
-  /*Card box shadow*/
-  /*box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
+// Base Layout
+.card .card__image {
+  .img-portfolio {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border: none;
+    @include transform(scale(1.1));
+    @include transition(all 1s);
+  }
 
-  /*default for mobile*/
-  width: 100%;
+  .tint__overlay {
+    @include position(absolute, 0 0 0 0);
+    @include transition(all 0.6s);
+    display: block;
+    margin: 0 auto;
+    background: #373d40;
+    background-size: 50px 50px;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .text-overlay {
+    // Mobile Position
+    @include position(absolute, 25% 0 0 0);
+    @include transform(translateY(-20px));
+    @include transition(all .3s);
+    display: block;
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
 }
+
+
 
 /* Hover Effect*/
-.card:hover .card__image .img-portfolio {
-  overflow-x: hidden;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.card:hover .card__image {
+  // Image zoom in on hover
+  .img-portfolio {
+    overflow-x: hidden;
+    @include transform(scale(1.05));
+  }
+  // tint overlay on hover
+  .tint__overlay {
+    opacity: 0.8;
+  }
+  // text overlay on hover
+  .text-overlay {
+    @include transform(translateY(0px));
+    opacity: 1;
+  }
 }
+// End
 
-.card:hover .card__image .tint__overlay {
-  opacity: 0.8;
-}
-
-.card:hover .card__image .text-overlay {
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px);
-  opacity: 0.9;
-}
-
-.card .card__image .img-portfolio {
+// Button
+.btn-position {
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: inline-block;
-  width: 100%;
-  height: auto;
-  border: none;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  @include clearfix;
+  .ghost-button {
+    font-size: 3vw;
+    padding: 12px 24px;
+    border: solid #fff 1px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    @include transition(0.2s ease-in);
+    text-decoration: none;
+    &:hover {
+      color: white;
+      background: rgba(65, 75, 82, 0.9);
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+// End
+
+
+// Typography Mobile First
+.showcase__heading {
+  font-family: $text-overlay;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 6vw;
+}
+// End
+
+// Desktop - Tablet View
+// 1200 - 1920 and up
+@include breakpoint-1200-sm {
+  .cards__item {
+    // splits into two when breakpoint reaches into 1200px then switches width of 100% into a single column as a default for mobile
+    width: 50%;
+    padding: 1rem;
+
+    .card .card__image {
+      .text-overlay{
+        @include position(absolute, 30% 0 0 0);
+      }
+    }
+
+    .showcase__heading {
+      font-size: 2vw;
+    }
+
+    .btn-position {
+      .ghost-button {
+        font-size: 1vw;
+      }
+    }
+  }
 }
 
-.card .card__image .tint__overlay{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  margin: auto;
-  background: #373d40;
-  background-size: 50px 50px;
-  opacity: 0;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-  overflow: hidden;
-}
+// Desktop
+// Min width 1600 - 1920 and up
+@include breakpoint-1600-sm {
+  .cards__item {
+    // splits three columns less than 1600px changes width into 50% in 1200-sm mq as two columns
+    // width: 50%;
+    width: 33.3333%;
+    padding: 1rem;
 
-.card .card__image .text-overlay {
-  display: block;
-  padding: 0 30px;
-  box-sizing: border-box;
-  position: absolute;
-  top: 15%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: left;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
+    .card .card__image {
+      .text-overlay{
+        @include position(absolute, 28% 0 0 0);
+      }
+    }
 
-.card .card__image .h3 {
-  text-transform: uppercase;
-  color: white;
+    .showcase__heading {
+      font-size: 2vw;
+    }
+  }
+
+  .btn-position {
+    .ghost-button {
+      font-size: 1vw;
+    }
+  }
 }
-/* End */

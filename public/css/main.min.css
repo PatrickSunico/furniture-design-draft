@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +22,8 @@ html, body {
 
 /* typography*/
 /* typography reset*/
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, .p, a, p {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -30,12 +32,21 @@ html, body {
   font-weight: 700;
   margin-bottom: 40px;
   margin-top: 40px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
-.h2, .h3 {
+.h2 {
   letter-spacing: 4px;
   margin-bottom: 40px;
+}
+
+.h3 {
+  color: #000;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
 /* underlined style class*/
@@ -190,12 +201,6 @@ html, body {
   margin: 20px auto;
 }
 
-img {
-  height: auto;
-  width: 100%;
-  vertical-align: middle;
-}
-
 .cards {
   display: -webkit-box;
   display: -moz-box;
@@ -222,90 +227,85 @@ img {
   display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* Default for mobile */
+  /* Default size when resized for mobile */
   width: 100%;
-}
-
-/* Desktop View */
-@media only screen and (min-width: 1200px) {
-  /*splits three columns less than 1200px changes into default 100% as one column */
-  .cards__item {
-    width: 33.3333%;
-  }
-}
-
-.card__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.card__image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-filter: contrast(70%);
-  filter: contrast(70%);
-  overflow: hidden;
-  position: relative;
-}
-
-.card__title {
-  color: #000;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.card__text {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
 }
 
 .card {
   background-color: white;
-  /*Card box shadow*/
-  /*box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);*/
   display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
+  box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+  box-direction: normal;
+  -ms-flex-direction: normal;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -moz-flex-direction: column;
   flex-direction: column;
+  -ms-flex-direction: column;
   overflow: hidden;
-  /*default for mobile*/
+  /* Default size when resized for mobile */
   width: 100%;
 }
 
-/* Hover Effect*/
-.card:hover .card__image .img-portfolio {
-  overflow-x: hidden;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+.card .card__image {
+  -webkit-filter: contrast(90%);
+  filter: contrast(90%);
+  overflow: hidden;
+  position: relative;
 }
 
-.card:hover .card__image .tint__overlay {
-  opacity: 0.8;
+.card .card__image img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
 }
 
-.card:hover .card__image .text-overlay {
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px);
-  opacity: 0.9;
+.card__description {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-direction: vertical;
+  box-direction: vertical;
+  -ms-flex-direction: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  padding: 1rem;
+}
+
+.card__description .card__text {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .card .card__image .img-portfolio {
@@ -325,38 +325,128 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
   display: block;
-  margin: auto;
+  margin: 0 auto;
   background: #373d40;
   background-size: 50px 50px;
   opacity: 0;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
   overflow: hidden;
 }
 
 .card .card__image .text-overlay {
-  display: block;
-  padding: 0 30px;
-  box-sizing: border-box;
   position: absolute;
-  top: 15%;
+  top: 25%;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
-  text-align: left;
-  opacity: 0;
-  filter: alpha(opacity=0);
   -webkit-transform: translateY(-20px);
   transform: translateY(-20px);
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: block;
+  padding: 0 30px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 
-.card .card__image .h3 {
+/* Hover Effect*/
+.card:hover .card__image .img-portfolio {
+  overflow-x: hidden;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.card:hover .card__image .tint__overlay {
+  opacity: 0.8;
+}
+
+.card:hover .card__image .text-overlay {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.btn-position {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.btn-position::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.btn-position .ghost-button {
+  font-size: 3vw;
+  padding: 12px 24px;
+  border: solid #fff 1px;
+  font-weight: 700;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  text-decoration: none;
 }
 
-/* End */
+.btn-position .ghost-button:hover {
+  color: white;
+  background: rgba(65, 75, 82, 0.9);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.showcase__heading {
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 6vw;
+}
+
+@media only screen and (min-width: 1200px) {
+  .cards__item {
+    width: 50%;
+    padding: 1rem;
+  }
+  .cards__item .card .card__image .text-overlay {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .cards__item .showcase__heading {
+    font-size: 2vw;
+  }
+  .cards__item .btn-position .ghost-button {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .cards__item {
+    width: 33.3333%;
+    padding: 1rem;
+  }
+  .cards__item .card .card__image .text-overlay {
+    position: absolute;
+    top: 28%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .cards__item .showcase__heading {
+    font-size: 2vw;
+  }
+  .btn-position .ghost-button {
+    font-size: 1vw;
+  }
+}

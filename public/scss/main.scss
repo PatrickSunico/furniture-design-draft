@@ -1,6 +1,12 @@
 // Mixins
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+$text-overlay: 'Playfair Display', serif;
+$main-font: 'Poppins', sans-serif;
+
+
 @import 'mixins/mixins';
 
 //vendor
