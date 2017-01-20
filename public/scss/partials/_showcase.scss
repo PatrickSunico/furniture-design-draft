@@ -1,5 +1,3 @@
-
-
 // Card Layout
 .cards {
   // removes the need for vendor prefixes
@@ -21,8 +19,6 @@
 // Base Layout
 .card {
   background-color: white;
-  // Card Box Shadow
-  // box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   @include display(flex);
   @include box-orient(vertical);
   @include box-direction(normal);
@@ -129,14 +125,16 @@
   @include clearfix;
   .ghost-button {
     font-size: 3vw;
-    padding: 12px 24px;
+    padding: 10px 18px;
     border: solid #fff 1px;
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #fff;
-    @include transition(0.2s ease-in);
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
     text-decoration: none;
+
     &:hover {
       color: white;
       background: rgba(65, 75, 82, 0.9);
@@ -145,7 +143,6 @@
   }
 }
 // End
-
 
 // Typography Mobile First
 .showcase__heading {
@@ -157,11 +154,10 @@
 }
 // End
 
-// Desktop - Tablet View
-// 1200 - 1920 and up
-@include breakpoint-1200-sm {
+// Mobile Breakpoint
+@include breakpoint-640-sm {
   .cards__item {
-    // splits into two when breakpoint reaches into 1200px then switches width of 100% into a single column as a default for mobile
+    // splits into two when breakpoint reaches into 640px then switches width of 100% into a single column as a default for mobile
     width: 50%;
     padding: 1rem;
 
@@ -170,14 +166,24 @@
         @include position(absolute, 30% 0 0 0);
       }
     }
-
     .showcase__heading {
-      font-size: 2vw;
+      font-size: 3vw;
     }
 
     .btn-position {
       .ghost-button {
-        font-size: 1vw;
+        font-size: 1.2vw;
+      }
+    }
+  }
+}
+
+// Aligns text-overlay centered into parent container
+@include breakpoint-1024-sm {
+  .cards__item {
+    .card .card__image {
+      .text-overlay{
+        @include position(absolute, 25% 0 0 0);
       }
     }
   }
@@ -201,11 +207,10 @@
     .showcase__heading {
       font-size: 2vw;
     }
-  }
-
-  .btn-position {
-    .ghost-button {
-      font-size: 1vw;
+    .btn-position {
+      .ghost-button {
+        font-size: 0.8vw;
+      }
     }
   }
 }

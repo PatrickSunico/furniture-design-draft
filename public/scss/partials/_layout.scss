@@ -2,10 +2,7 @@
 // Main Wrapper
 #wrapper {
   padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  @include transition(all 0.5s ease);
   overflow-x: hidden;
 }
 
@@ -15,18 +12,14 @@
 
 #sidebar-wrapper {
   z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 0;
+  @include position(fixed, null null null 250px);
+  width: 0; // width: 0 needed for ease in flow when collapsed
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
   background: #414B52;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   overflow-x: hidden;
+  @include transition(all 0.5s ease);
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -47,8 +40,9 @@
 
 /* Sidebar Styles */
 .sidebar-nav {
-  position: absolute;
-  top: 0;
+  @include position(absolute, 0 null null null null);
+  // position: absolute;
+  // top: 0;
   width: 250px;
   height: 100%;
   margin: 0;
@@ -70,13 +64,11 @@
 }
 
 .sidebar-nav a:hover {
-  // color: #f1f1f1;
   color: #818181;
-
 }
 
 /* Desktop View*/
-@media only screen and (min-width: 991px){
+@media only screen and (min-width: 1024px){
     #wrapper {
         padding-left: 250px;
         overflow-x: hidden;
@@ -114,11 +106,7 @@
     width: 20px;
     height: 15px;
     margin: 15px auto;
-    // position: absolute;
-    // top: 0px;
-    // right: -60px;
     cursor: pointer;
-    // font-size: 30px;
     span {
       height: 2px;
       background: #111;
