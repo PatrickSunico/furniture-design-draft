@@ -74,7 +74,7 @@ html, body {
 }
 
 .section-spacing {
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
 .section-spacing::after {
@@ -83,7 +83,6 @@ html, body {
   display: table;
 }
 
-/* Toggle Styles */
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -95,8 +94,17 @@ html, body {
   padding-left: 250px;
 }
 
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  overflow-x: hidden;
+}
+
 #sidebar-wrapper {
-  z-index: 1000;
+  z-index: 9999;
   position: fixed;
   left: 250px;
   width: 0;
@@ -107,21 +115,6 @@ html, body {
   overflow-x: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
-}
-
-#page-content-wrapper {
-  position: absolute;
-  padding: 15px;
-  overflow-x: hidden;
-}
-
-#wrapper.toggled #page-content-wrapper {
-  position: absolute;
-  overflow-x: hidden;
 }
 
 /* Sidebar Styles */
@@ -146,41 +139,20 @@ html, body {
   color: #fff;
 }
 
+.sidebar-nav li a:hover {
+  color: #818181;
+}
+
 .sidebar-nav .sidebar-brand {
   margin: 120px auto;
 }
 
-.sidebar-nav a:hover {
-  color: #818181;
+#page-content-wrapper {
+  position: absolute;
+  padding: 15px;
+  overflow-x: hidden;
 }
 
-/* Desktop View*/
-@media only screen and (min-width: 1024px) {
-  #wrapper {
-    padding-left: 250px;
-    overflow-x: hidden;
-  }
-  #wrapper.toggled {
-    padding-left: 0;
-  }
-  #sidebar-wrapper {
-    width: 250px;
-  }
-  #wrapper.toggled #sidebar-wrapper {
-    width: 0;
-  }
-  #page-content-wrapper {
-    padding: 15px 40px;
-    position: relative;
-    overflow-x: hidden;
-  }
-  #wrapper.toggled #page-content-wrapper {
-    position: relative;
-    margin-right: 0;
-  }
-}
-
-/* mobile */
 #page-content-wrapper #menu-toggle {
   display: inline-block;
   vertical-align: middle;
@@ -195,6 +167,39 @@ html, body {
   background: #111;
   margin-bottom: 5px;
   display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-spacing {
+    margin: 100px auto;
+  }
+  .section-spacing::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  #wrapper {
+    padding-left: 250px;
+    overflow-x: hidden;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 15px 40px;
+    position: relative;
+    overflow-x: hidden;
+  }
 }
 
 .cards {

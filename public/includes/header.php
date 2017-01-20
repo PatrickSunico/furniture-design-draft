@@ -23,7 +23,6 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                   <a href="#">
-                    <!-- <img src="" alt=""> -->
                     <?php include "includes/icons/couch.php" ?>
                   </a>
                 </li>

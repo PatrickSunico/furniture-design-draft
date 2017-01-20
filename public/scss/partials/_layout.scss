@@ -1,17 +1,32 @@
-/* Toggle Styles */
+// Section Wrapper
+.section-spacing {
+  margin: 0 auto;
+  @include clearfix;
+}
 // Main Wrapper
 #wrapper {
   padding-left: 0;
   @include transition(all 0.5s ease);
   overflow-x: hidden;
+
+  &.toggled {
+    padding-left: 250px;
+  }
 }
 
-#wrapper.toggled {
-  padding-left: 250px;
+// Toggled width default
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
 }
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  overflow-x: hidden;
+}
+// End
 
+// Base Layout Default
 #sidebar-wrapper {
-  z-index: 1000;
+  z-index: 9999;
   @include position(fixed, null null null 250px);
   width: 0; // width: 0 needed for ease in flow when collapsed
   height: 100%;
@@ -21,28 +36,11 @@
   overflow-x: hidden;
   @include transition(all 0.5s ease);
 }
-
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
-}
-
-// page content wrapper
-#page-content-wrapper {
-  position: absolute;
-  padding: 15px;
-  overflow-x: hidden;
-}
-
-#wrapper.toggled #page-content-wrapper {
-  position: absolute;
-  overflow-x: hidden;
-}
+// End
 
 /* Sidebar Styles */
 .sidebar-nav {
   @include position(absolute, 0 null null null null);
-  // position: absolute;
-  // top: 0;
   width: 250px;
   height: 100%;
   margin: 0;
@@ -52,55 +50,26 @@
     display: block;
     text-decoration: none;
     padding-left: 32px;
-    transition: 0.3s;
+    @include transition(0.3s);
     margin: 20px auto;
     font-size: 18px;
     color: #fff;
+    &:hover {
+      color: #818181;
+    }
+  }
+  .sidebar-brand {
+    margin: 120px auto;
   }
 }
 
-.sidebar-nav .sidebar-brand {
-  margin: 120px auto;
-}
+// page content wrapper
+#page-content-wrapper {
+  @include position(absolute, null null null null);
+  padding: 15px;
+  overflow-x: hidden;
 
-.sidebar-nav a:hover {
-  color: #818181;
-}
-
-/* Desktop View*/
-@media only screen and (min-width: 1024px){
-    #wrapper {
-        padding-left: 250px;
-        overflow-x: hidden;
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 15px 40px;
-        position: relative;
-        overflow-x: hidden
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-}
-
-/* mobile */
-
-  #page-content-wrapper #menu-toggle {
+  #menu-toggle {
     display: inline-block;
     vertical-align: middle;
     width: 20px;
@@ -114,3 +83,37 @@
       display: block;
     }
   }
+}
+
+// Desktop View
+@include breakpoint-1024-sm {
+  .section-spacing {
+    margin: 100px auto;
+    @include clearfix;
+  }
+  #wrapper {
+      padding-left: 250px;
+      overflow-x: hidden;
+  }
+
+  #wrapper.toggled {
+    padding-left: 0;
+    #sidebar-wrapper {
+      width: 0;
+    }
+    #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+    }
+  }
+
+  #sidebar-wrapper {
+      width: 250px;
+  }
+
+  #page-content-wrapper {
+      padding: 15px 40px;
+      position: relative;
+      overflow-x: hidden
+  }
+}
