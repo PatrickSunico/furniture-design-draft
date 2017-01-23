@@ -166,7 +166,9 @@
   .cards__item {
     // splits into two when breakpoint reaches into 640px then switches width of 100% into a single column as a default for mobile
     width: 50%;
-    padding: 1rem;
+    // padding: 1rem;
+    padding: 0 1rem 1rem 0;
+
 
     .card .card__image {
       .text-overlay{
@@ -207,7 +209,8 @@
     // splits three columns less than 1600px changes width into 50% in 1200-sm mq as two columns
     // width: 50%;
     width: 33.3333%;
-    padding: 1rem;
+    // padding: 1rem;
+    padding: 0 1rem 1rem 0;
 
     .card .card__image {
       .text-overlay{

@@ -62,9 +62,7 @@
 }
 
 .sidebar-nav a:hover {
-  // color: #f1f1f1;
   color: #818181;
-
 }
 
 /* Desktop View + side nav breakpoint*/
@@ -93,11 +91,8 @@
     }
 
     #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    &:hover {
-      color: #818181;
-    }
+      position: relative;
+      margin-right: 0;
   }
   .sidebar-brand {
     margin: 120px auto;
@@ -129,7 +124,7 @@
 // Desktop View
 @include breakpoint-1024-sm {
   .section-spacing {
-    margin: 100px auto;
+    margin: 60px auto;
     @include clearfix;
   }
   #wrapper {
