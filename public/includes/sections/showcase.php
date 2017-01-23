@@ -58,7 +58,7 @@
 
       <div class="cards__item">
 
-        <div class="card">``
+        <div class="card">
           <!-- Card BG -->
           <div class="card__image">
             <img class="img-portfolio" src="assets/table-top.jpg" alt="">
