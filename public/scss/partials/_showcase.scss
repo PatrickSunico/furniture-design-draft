@@ -1,3 +1,20 @@
+
+// Typography Mobile First
+.showcase__heading {
+  font-family: $text-overlay;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 6vw;
+  margin-bottom: 20px;
+}
+
+.manufacturer {
+  @extend .showcase__heading;
+  font-size: 4.2vw;
+}
+// End
+
 // Card Layout
 .cards {
   // removes the need for vendor prefixes
@@ -47,7 +64,7 @@
   @include box-direction(vertical);
   @include box-orient(vertical);
   @include flex-direction(column);
-  padding: 1rem;
+  margin-top: 1rem;
   .card__text {
     @include flex(1 1 auto);
     line-height: 1.5;
@@ -143,16 +160,6 @@
 }
 // End
 
-// Typography Mobile First
-.showcase__heading {
-  font-family: $text-overlay;
-  color: #fff;
-  text-transform: capitalize;
-  font-style: italic;
-  font-size: 6vw;
-}
-// End
-
 // Mobile Breakpoint
 @include breakpoint-640-sm {
   .cards__item {
@@ -167,6 +174,10 @@
     }
     .showcase__heading {
       font-size: 3vw;
+    }
+
+    .manufacturer {
+      font-size: 2vw;
     }
 
     .btn-position {
@@ -205,6 +216,10 @@
 
     .showcase__heading {
       font-size: 2vw;
+    }
+
+    .manufacturer {
+      font-size: 1.4vw;
     }
     .btn-position {
       .ghost-button {

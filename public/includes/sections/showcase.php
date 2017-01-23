@@ -15,7 +15,7 @@
             <div class="tint__overlay"></div>
             <div class="text-overlay">
               <h4 class="showcase__heading">Couch Set</h4>
-              <h4 class="showcase__heading">ABC Furniture</h4>
+              <h5 class="manufacturer">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -40,7 +40,7 @@
             <div class="tint__overlay"></div>
             <div class="text-overlay">
               <h4 class="showcase__heading">Dining Set</h4>
-              <h4 class="showcase__heading">ABC Furniture</h4>
+              <h5 class="manufacturer">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -58,15 +58,15 @@
 
       <div class="cards__item">
 
-        <div class="card">
+        <div class="card">``
           <!-- Card BG -->
           <div class="card__image">
-            <img class="img-portfolio" src="assets/Couch-set.jpg" alt="">
+            <img class="img-portfolio" src="assets/table-top.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
 
               <h4 class="showcase__heading">Table Top</h4>
-              <h4 class="showcase__heading">ABC Furniture</h4>
+              <h5 class="manufacturer">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -89,11 +89,11 @@
         <div class="card">
           <!-- Card BG -->
           <div class="card__image">
-            <img class="img-portfolio" src="assets/table-top.jpg" alt="">
+            <img class="img-portfolio" src="assets/study-table.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Couch Set</h4>
-              <h4 class="showcase__heading">ABC Furniture</h4>
+              <h4 class="showcase__heading">Study Table</h4>
+              <h5 class="manufacturer">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -102,7 +102,7 @@
 
           <!-- Description -->
           <div class="card__description">
-            <h3 class="h3">Flex</h3>
+            <h3 class="h3">Study Table</h3>
             <p class="card__text">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit,  </p>
           </div>
         </div>
@@ -118,7 +118,7 @@
             <div class="tint__overlay"></div>
             <div class="text-overlay">
               <h4 class="showcase__heading">Computer Table</h4>
-              <h4 class="showcase__heading">ABC Furniture</h4>
+              <h5 class="manufacturer">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -139,11 +139,11 @@
         <div class="card">
           <!-- Card BG -->
           <div class="card__image">
-            <img class="img-portfolio" src="assets/study-table.jpg" alt="">
+            <img class="img-portfolio" src="assets/study-table-long.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Study Table</h4>
-              <h4 class="showcase__heading">ABC Furniture</h4>
+              <h4 class="showcase__heading">Study Table (Long)</h4>
+              <h5 class="manufacturer">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -152,7 +152,7 @@
 
           <!-- Description -->
           <div class="card__description">
-            <h3 class="h3">Study Table</h3>
+            <h3 class="h3">Study Table (Long)</h3>
             <p class="card__text">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, </p>
           </div>
         </div>

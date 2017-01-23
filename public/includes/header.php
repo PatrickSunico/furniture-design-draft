@@ -11,8 +11,6 @@
     <meta name="author" content="">
     <title>Furniture Design</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" media="screen" title="no title">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> -->
     <link href="css/main.min.css" rel="stylesheet">
 </head>
 

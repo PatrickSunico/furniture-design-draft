@@ -33,11 +33,13 @@ html, body {
   margin-bottom: 40px;
   margin-top: 40px;
   letter-spacing: 4px;
+  font-size: 64px;
 }
 
 .h2 {
   letter-spacing: 4px;
   margin-bottom: 40px;
+  font-size: 36px;
 }
 
 .h3 {
@@ -202,6 +204,19 @@ html, body {
   }
 }
 
+.showcase__heading, .manufacturer {
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 6vw;
+  margin-bottom: 20px;
+}
+
+.manufacturer {
+  font-size: 4.2vw;
+}
+
 .cards {
   display: -webkit-box;
   display: -moz-box;
@@ -294,7 +309,7 @@ html, body {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
-  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .card__description .card__text {
@@ -404,14 +419,6 @@ html, body {
   transition: all 0.2s ease-in;
 }
 
-.showcase__heading {
-  font-family: "Playfair Display", serif;
-  color: #fff;
-  text-transform: capitalize;
-  font-style: italic;
-  font-size: 6vw;
-}
-
 @media only screen and (min-width: 640px) {
   .cards__item {
     width: 50%;
@@ -424,8 +431,11 @@ html, body {
     bottom: 0;
     left: 0;
   }
-  .cards__item .showcase__heading {
+  .cards__item .showcase__heading, .cards__item .manufacturer {
     font-size: 3vw;
+  }
+  .cards__item .manufacturer {
+    font-size: 2vw;
   }
   .cards__item .btn-position .ghost-button {
     font-size: 1.2vw;
@@ -454,8 +464,11 @@ html, body {
     bottom: 0;
     left: 0;
   }
-  .cards__item .showcase__heading {
+  .cards__item .showcase__heading, .cards__item .manufacturer {
     font-size: 2vw;
+  }
+  .cards__item .manufacturer {
+    font-size: 1.4vw;
   }
   .cards__item .btn-position .ghost-button {
     font-size: 0.8vw;
