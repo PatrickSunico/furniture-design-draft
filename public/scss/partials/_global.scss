@@ -32,16 +32,10 @@ html,body {
 
 .h1 {
   font-weight: 700;
-<<<<<<< HEAD
-  margin-bottom: 20px;
-  margin-top: 20px;
-  letter-spacing: 2px;
-=======
   margin-bottom: 40px;
   margin-top: 40px;
   letter-spacing: 4px;
   font-size: 64px;
->>>>>>> test
 }
 
 .h2 {
@@ -79,15 +73,11 @@ html,body {
   font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
-<<<<<<< HEAD
+  margin-bottom: 20px;
 }
 
 
 .section-spacing {
-  margin-top: 80px;
-  margin-bottom: 80px;
   @include clearfix;
-=======
   margin: 20px 0;
->>>>>>> test
 }

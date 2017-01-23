@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i");
-=======
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
->>>>>>> test
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,16 +30,10 @@ html, body {
 
 .h1 {
   font-weight: 700;
-<<<<<<< HEAD
-  margin-bottom: 20px;
-  margin-top: 20px;
-  letter-spacing: 2px;
-=======
   margin-bottom: 40px;
   margin-top: 40px;
   letter-spacing: 4px;
   font-size: 64px;
->>>>>>> test
 }
 
 .h2 {
@@ -82,16 +72,21 @@ html, body {
   font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .section-spacing {
-<<<<<<< HEAD
-  margin-top: 80px;
-  margin-bottom: 80px;
-=======
+  margin: 20px 0;
+}
+
+.section-spacing::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.section-spacing {
   margin: 0 auto;
->>>>>>> test
 }
 
 .section-spacing::after {
@@ -156,12 +151,44 @@ html, body {
   color: #fff;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav .sidebar-brand {
+  margin: 120px 0 80px 0;
+}
+
+.sidebar-nav a:hover {
   color: #818181;
 }
 
-.sidebar-nav .sidebar-brand {
-  margin: 120px 0 80px 0;
+/* Desktop View + side nav breakpoint*/
+@media only screen and (min-width: 1200px) {
+  #wrapper {
+    padding-left: 250px;
+    overflow-x: hidden;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+  #page-content-wrapper {
+    padding: 30px 30px;
+    position: relative;
+    overflow-x: hidden;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+  #wrapper.toggled #page-content-wrapper:hover {
+    color: #818181;
+  }
+  .sidebar-brand {
+    margin: 120px auto;
+  }
 }
 
 #page-content-wrapper {
@@ -186,10 +213,6 @@ html, body {
   display: block;
 }
 
-<<<<<<< HEAD
-/* Desktop View + side nav breakpoint*/
-@media only screen and (min-width: 1200px) {
-=======
 @media only screen and (min-width: 1024px) {
   .section-spacing {
     margin: 100px auto;
@@ -199,7 +222,6 @@ html, body {
     content: "";
     display: table;
   }
->>>>>>> test
   #wrapper {
     padding-left: 250px;
     overflow-x: hidden;
@@ -218,7 +240,7 @@ html, body {
     width: 250px;
   }
   #page-content-wrapper {
-    padding: 30px 30px;
+    padding: 15px 40px;
     position: relative;
     overflow-x: hidden;
   }
@@ -254,15 +276,6 @@ html, body {
   padding: 0;
 }
 
-<<<<<<< HEAD
-div.thumb-unit {
-  display: inline-block;
-  width: 100%;
-  vertical-align: middle;
-  box-sizing: border-box;
-  padding: 0;
-  position: relative;
-=======
 .cards__item {
   display: -webkit-box;
   display: -moz-box;
@@ -296,7 +309,6 @@ div.thumb-unit {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
->>>>>>> test
   overflow: hidden;
   /* Default size when resized for mobile */
   width: 100%;
