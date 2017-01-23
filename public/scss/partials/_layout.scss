@@ -18,6 +18,7 @@
   position: absolute;
   overflow-x: hidden;
 }
+
 // End
 
 // Base Layout Default
@@ -64,7 +65,7 @@
 // page content wrapper
 #page-content-wrapper {
   @include position(absolute, null null null null);
-  padding: 15px;
+  // padding: 15px;
   overflow-x: hidden;
 
   #menu-toggle {
@@ -85,10 +86,7 @@
 
 // Desktop View
 @include breakpoint-1024-sm {
-  .section-spacing {
-    margin: 60px auto;
-    @include clearfix;
-  }
+
   #wrapper {
       padding-left: 250px;
       overflow-x: hidden;
@@ -110,7 +108,7 @@
   }
 
   #page-content-wrapper {
-      padding: 15px 40px;
+      // padding: 15px 40px;
       position: relative;
       overflow-x: hidden
   }

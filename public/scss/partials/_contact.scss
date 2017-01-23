@@ -11,3 +11,64 @@
 //     width: 100% !important;
 //     height: 100% !important;
 // }
+
+.contact {
+  padding: 96px 0;
+  background: #93ACBF;
+  color: white;
+  @include clearfix;
+  display: none;
+
+  .contact-container {
+    @include clearfix;
+    margin: 0 auto;
+    .text {
+      width: 50%;
+      float: left;
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 18px;
+      text-align: justify;
+    }
+    .contact-button {
+      float:right;
+      text-decoration: none;
+      color: white;
+      border: solid 4px #fff;
+      padding: 22px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+
+@include breakpoint-991-sm {
+  .contact {
+    display: block;
+    .contact-container {
+        width: 768px;
+    }
+  }
+}
+
+@include breakpoint-1200-sm {
+  .contact {
+    display: block;
+    .contact-container {
+        width: 960px;
+    }
+  }
+}
+
+@include breakpoint-1600-sm {
+  .contact {
+    display: block;
+    .contact-container {
+      width: 1280px;
+    }
+  }
+}

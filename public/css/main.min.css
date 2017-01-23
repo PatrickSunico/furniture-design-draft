@@ -75,8 +75,12 @@ html, body {
   margin-bottom: 20px;
 }
 
+.header {
+  margin: 40px 40px;
+}
+
 .section-spacing {
-  margin: 20px 0;
+  margin: 60px 40px;
 }
 
 .section-spacing::after {
@@ -151,7 +155,6 @@ html, body {
 
 #page-content-wrapper {
   position: absolute;
-  padding: 15px;
   overflow-x: hidden;
 }
 
@@ -172,14 +175,6 @@ html, body {
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-spacing {
-    margin: 60px auto;
-  }
-  .section-spacing::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
   #wrapper {
     padding-left: 250px;
     overflow-x: hidden;
@@ -198,7 +193,6 @@ html, body {
     width: 250px;
   }
   #page-content-wrapper {
-    padding: 15px 40px;
     position: relative;
     overflow-x: hidden;
   }
@@ -445,7 +439,7 @@ html, body {
 @media only screen and (min-width: 1024px) {
   .cards__item .card .card__image .text-overlay {
     position: absolute;
-    top: 25%;
+    top: 30%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -472,5 +466,75 @@ html, body {
   }
   .cards__item .btn-position .ghost-button {
     font-size: 0.8vw;
+  }
+}
+
+.contact {
+  padding: 96px 0;
+  background: #93ACBF;
+  color: white;
+  display: none;
+}
+
+.contact::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.contact .contact-container {
+  margin: 0 auto;
+}
+
+.contact .contact-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.contact .contact-container .text {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.contact .contact-container .contact-button {
+  float: right;
+  text-decoration: none;
+  color: white;
+  border: solid 4px #fff;
+  padding: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 991px) {
+  .contact {
+    display: block;
+  }
+  .contact .contact-container {
+    width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contact {
+    display: block;
+  }
+  .contact .contact-container {
+    width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .contact {
+    display: block;
+  }
+  .contact .contact-container {
+    width: 1280px;
   }
 }

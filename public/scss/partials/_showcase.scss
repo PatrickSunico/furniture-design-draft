@@ -196,7 +196,7 @@
   .cards__item {
     .card .card__image {
       .text-overlay{
-        @include position(absolute, 25% 0 0 0);
+        @include position(absolute, 30% 0 0 0);
       }
     }
   }
