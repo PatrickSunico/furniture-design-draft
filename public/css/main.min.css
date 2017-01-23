@@ -85,16 +85,6 @@ html, body {
   display: table;
 }
 
-.section-spacing {
-  margin: 0 auto;
-}
-
-.section-spacing::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -157,35 +147,6 @@ html, body {
 
 .sidebar-nav a:hover {
   color: #818181;
-}
-
-/* Desktop View + side nav breakpoint*/
-@media only screen and (min-width: 1200px) {
-  #wrapper {
-    padding-left: 250px;
-    overflow-x: hidden;
-  }
-  #wrapper.toggled {
-    padding-left: 0;
-  }
-  #sidebar-wrapper {
-    width: 250px;
-  }
-  #wrapper.toggled #sidebar-wrapper {
-    width: 0;
-  }
-  #page-content-wrapper {
-    padding: 30px 30px;
-    position: relative;
-    overflow-x: hidden;
-  }
-  #wrapper.toggled #page-content-wrapper {
-    position: relative;
-    margin-right: 0;
-  }
-  .sidebar-brand {
-    margin: 120px auto;
-  }
 }
 
 #page-content-wrapper {
