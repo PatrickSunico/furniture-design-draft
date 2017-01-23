@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  div.thumb-unit {
   display: inline-block;
   width: 100%;
@@ -13,121 +14,151 @@
   overflow-x: hidden;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
+=======
 
- div.thumb-unit:hover .thumb-overlay {
-  opacity: 0.8;
-}
-
- div.thumb-unit:hover .text-overlay {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  opacity: 0.9;
-}
-
- div.thumb-unit .img-portfolio {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  border: none;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
- div.thumb-unit .thumb-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  margin: auto;
-  background: #373d40;
-  background-size: 50px 50px;
-  opacity: 0;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-  overflow: hidden;
-}
-
-/* Text Overlay */
- div.thumb-unit .text-overlay {
-  display: block;
-  padding: 0 30px;
-  box-sizing: border-box;
-  position: absolute;
-  top: 15%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: left;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-
- div.thumb-unit .text-overlay .h3 {
-  text-transform: uppercase;
-  color: white;
-}
-
-div.thumb-unit .text-overlay .h3.underlined {
-  display: inline-block;
-  padding-bottom: 8px;
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0%;
-    border-bottom: 4px solid white;
-  }
-}
-
-
-div.thumb-unit .text-overlay p {
-  color: white;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 1200px) {
-   div.thumb-unit {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-   div.thumb-unit {
-    width: 100%;
-  }
-
-}
-
-@media only screen and (max-width: 580px) {
-   div.thumb-unit {
-    width: 100%;
-  }
-  .column-spacing {
-    padding: 10px 0;
-  }
-}
-
-
-.btn-position {
-  margin-top: 20px;
+// Typography Mobile First
+.showcase__heading {
+  font-family: $text-overlay;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 6vw;
   margin-bottom: 20px;
+>>>>>>> test
+}
+
+.manufacturer {
+  @extend .showcase__heading;
+  font-size: 4.2vw;
+}
+// End
+
+// Card Layout
+.cards {
+  // removes the need for vendor prefixes
+  @include display(flex);
+  @include flex-wrap(wrap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  @include display(flex);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* Default size when resized for mobile */
+  width: 100%;
+}
+
+// Base Layout
+.card {
+  background-color: white;
+  @include display(flex);
+  @include box-orient(vertical);
+  @include box-direction(normal);
+  @include flex-direction(column);
+  overflow: hidden;
+  /* Default size when resized for mobile */
+  width: 100%;
+
+  .card__image {
+    @include filter(contrast(90%));
+    overflow: hidden;
+    position: relative;
+    img {
+      height: auto;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+// Card Description
+.card__description {
+  @include display(flex);
+  @include flex(1 1 auto);
+  @include box-direction(vertical);
+  @include box-orient(vertical);
+  @include flex-direction(column);
+  margin-top: 1rem;
+  .card__text {
+    @include flex(1 1 auto);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+// End
+
+
+// Base Layout
+.card .card__image {
+  .img-portfolio {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border: none;
+    @include transform(scale(1.1));
+    @include transition(all 1s);
+  }
+
+  .tint__overlay {
+    @include position(absolute, 0 0 0 0);
+    @include transition(all 0.6s);
+    display: block;
+    margin: 0 auto;
+    background: #373d40;
+    background-size: 50px 50px;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .text-overlay {
+    // Mobile Position
+    @include position(absolute, 25% 0 0 0);
+    @include transform(translateY(-20px));
+    @include transition(all .3s);
+    display: block;
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+
+
+/* Hover Effect*/
+.card:hover .card__image {
+  // Image zoom in on hover
+  .img-portfolio {
+    overflow-x: hidden;
+    @include transform(scale(1.05));
+  }
+  // tint overlay on hover
+  .tint__overlay {
+    opacity: 0.8;
+  }
+  // text overlay on hover
+  .text-overlay {
+    @include transform(translateY(0px));
+    opacity: 1;
+  }
+}
+// End
+
+// Button
+.btn-position {
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: inline-block;
   @include clearfix;
+<<<<<<< HEAD
 
   .ghost-button {
       padding: 18px 24px;
@@ -143,6 +174,93 @@ div.thumb-unit .text-overlay p {
         color: white;
         background: rgba(65, 75, 82, 0.9);
         transition: all 0.2s ease-in;
+=======
+  .ghost-button {
+    font-size: 3vw;
+    padding: 10px 18px;
+    border: solid #fff 1px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    @include transition(0.2s ease-in);
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+      background: rgba(65, 75, 82, 0.9);
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+// End
+
+// Mobile Breakpoint
+@include breakpoint-640-sm {
+  .cards__item {
+    // splits into two when breakpoint reaches into 640px then switches width of 100% into a single column as a default for mobile
+    width: 50%;
+    padding: 1rem;
+
+    .card .card__image {
+      .text-overlay{
+        @include position(absolute, 30% 0 0 0);
       }
+    }
+    .showcase__heading {
+      font-size: 3vw;
+    }
+
+    .manufacturer {
+      font-size: 2vw;
+    }
+
+    .btn-position {
+      .ghost-button {
+        font-size: 1.2vw;
+      }
+    }
+  }
+}
+
+// Aligns text-overlay centered into parent container
+@include breakpoint-1024-sm {
+  .cards__item {
+    .card .card__image {
+      .text-overlay{
+        @include position(absolute, 25% 0 0 0);
+      }
+    }
+  }
+}
+
+// Desktop
+// Min width 1600 - 1920 and up
+@include breakpoint-1600-sm {
+  .cards__item {
+    // splits three columns less than 1600px changes width into 50% in 1200-sm mq as two columns
+    // width: 50%;
+    width: 33.3333%;
+    padding: 1rem;
+
+    .card .card__image {
+      .text-overlay{
+        @include position(absolute, 28% 0 0 0);
+      }
+    }
+
+    .showcase__heading {
+      font-size: 2vw;
+    }
+
+    .manufacturer {
+      font-size: 1.4vw;
+    }
+    .btn-position {
+      .ghost-button {
+        font-size: 0.8vw;
+>>>>>>> test
+      }
+    }
   }
 }

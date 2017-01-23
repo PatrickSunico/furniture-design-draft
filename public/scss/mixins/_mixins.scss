@@ -1,6 +1,17 @@
 //Breakpoints Desktop First
+@mixin breakpoint-1600-lg {
+  @media only screen and (max-width:1600px){
+    @content;
+  }
+}
+
 @mixin breakpoint-1200-lg {
   @media only screen and (max-width:1200px){
+    @content;
+  }
+}
+@mixin breakpoint-1024-lg {
+  @media only screen and (max-width:1024px){
     @content;
   }
 }
@@ -51,8 +62,19 @@
 }
 
 //Breakpoints Mobile First
+@mixin breakpoint-1600-sm {
+  @media only screen and (min-width:1600px){
+    @content;
+  }
+}
+
 @mixin breakpoint-1200-sm {
   @media only screen and (min-width:1200px){
+    @content;
+  }
+}
+@mixin breakpoint-1024-sm {
+  @media only screen and (min-width:1024px){
     @content;
   }
 }

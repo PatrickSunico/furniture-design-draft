@@ -14,13 +14,14 @@
 
       <!-- Underlined text header -->
       <h1 id="about"class="h1">Furniture Design</h1>
-
       <?php include("includes/sections/about-services.php"); ?>
-
       <?php include ("includes/sections/showcase.php"); ?>
+      <!-- Google Maps -->
+      <?php include ("includes/sections/contact.php"); ?>
   </div>
   <!-- /#page-content-wrapper -->
 
 <?php
+  // Footer
   include('includes/footer.php');
 ?>
