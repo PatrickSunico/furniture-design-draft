@@ -1,0 +1,21 @@
+footer {
+  padding: 40px 0;
+  background: #4A4A4A;
+  @include clearfix;
+}
+
+.footer-container {
+  @include clearfix;
+  margin: 0 auto;
+  width: 86%;
+
+  .footer-row {
+    // set width
+  }
+}
+
+@include breakpoint-1600-sm {
+  .footer-container {
+    width: 1580px;
+  }
+}

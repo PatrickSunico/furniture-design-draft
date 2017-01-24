@@ -32,3 +32,4 @@
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">

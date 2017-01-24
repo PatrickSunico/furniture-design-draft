@@ -2,17 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
-// Mixins
-
 $text-overlay: 'Playfair Display', serif;
 $main-font: 'Poppins', sans-serif;
 
+// Mixins
 @import 'mixins/mixins';
 
 //vendor
-// vendor partials i.e
 @import 'vendor/bourbon/bourbon';
-// @import 'mixins/animations';
 
 // Globals
 @import 'partials/global';
@@ -20,3 +17,4 @@ $main-font: 'Poppins', sans-serif;
 @import 'partials/layout';
 @import 'partials/showcase';
 @import 'partials/contact';
+@import 'partials/footer';

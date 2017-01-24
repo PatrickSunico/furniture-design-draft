@@ -53,6 +53,18 @@ html,body {
   margin-bottom: 25px;
 }
 
+// Footer
+.h5 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bolder;
+  letter-spacing: 2.06px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  text-align: left;
+}
+// End
+
 /* underlined style class*/
 .underlined__black {
   display: inline-block;
@@ -75,11 +87,6 @@ html,body {
   text-justify: inter-word;
   margin-bottom: 20px;
 }
-
-// .section-spacing {
-//   @include clearfix;
-//   margin: 20px 0;
-// }
 
 // Header
 .header {
