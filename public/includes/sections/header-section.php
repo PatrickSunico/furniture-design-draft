@@ -6,5 +6,5 @@
   </div>
 
   <!-- Underlined text header -->
-  <h1 id="about"class="h1">Furniture Design</h1>
+  <h1 class="h1">Furniture Design</h1>
 </section>
