@@ -5,8 +5,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
+    php2html = require("gulp-php2html"),
     php = require('gulp-connect-php');
-
 
 var reload = browserSync.reload;
 
@@ -40,6 +40,14 @@ gulp.task('browser-sync',['php'], function(){
     notify: false
   });
 });
+
+// Convert PHP Templates as a Single html
+gulp.task('convert', function() {
+  gulp.src("./public/index.php")
+      .pipe(php2html())
+      .pipe(gulp.dest("./public"));
+});
+
 
 // SCSS
 gulp.task('sass',function(){
