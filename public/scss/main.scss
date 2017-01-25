@@ -1,9 +1,7 @@
-// fonts
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-
-$text-overlay: 'Playfair Display', serif;
 $main-font: 'Poppins', sans-serif;
+$text-overlay: 'Playfair Display', serif;
 
 // Mixins
 @import 'mixins/mixins';
@@ -13,6 +11,7 @@ $main-font: 'Poppins', sans-serif;
 
 // Globals
 @import 'partials/global';
+@import 'partials/typography';
 // Partials
 @import 'partials/layout';
 @import 'partials/showcase';

@@ -12,8 +12,8 @@
             <img class="img-portfolio" src="assets/couch-set.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Couch Set</h4>
-              <h5 class="manufacturer">ABC Furniture</h5>
+              <h4 class="h4">Couch Set</h4>
+              <h5 class="h5-showcase">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -37,8 +37,8 @@
             <img class="img-portfolio" src="assets/dining.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Dining Set</h4>
-              <h5 class="manufacturer">ABC Furniture</h5>
+              <h4 class="h4">Dining Set</h4>
+              <h5 class="h5-showcase">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -63,8 +63,8 @@
             <div class="tint__overlay"></div>
             <div class="text-overlay">
 
-              <h4 class="showcase__heading">Table Top</h4>
-              <h5 class="manufacturer">ABC Furniture</h5>
+              <h4 class="h4">Table Top</h4>
+              <h5 class="h5-showcase">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -90,8 +90,8 @@
             <img class="img-portfolio" src="assets/study-table.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Study Table</h4>
-              <h5 class="manufacturer">ABC Furniture</h5>
+              <h4 class="h4">Study Table</h4>
+              <h5 class="h5-showcase">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -115,8 +115,8 @@
             <img class="img-portfolio" src="assets/computer-table.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Computer Table</h4>
-              <h5 class="manufacturer">ABC Furniture</h5>
+              <h4 class="h4">Computer Table</h4>
+              <h5 class="h5-showcase">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>
@@ -140,8 +140,8 @@
             <img class="img-portfolio" src="assets/study-table-long.jpg" alt="">
             <div class="tint__overlay"></div>
             <div class="text-overlay">
-              <h4 class="showcase__heading">Study Table (Long)</h4>
-              <h5 class="manufacturer">ABC Furniture</h5>
+              <h4 class="h4">Study Table (Long)</h4>
+              <h5 class="h5-showcase">ABC Furniture</h5>
               <div class="btn-position">
                 <a href="" class="ghost-button">View More</a>
               </div>

@@ -1,23 +1,49 @@
+// Mobile First
 footer {
-  padding: 40px 0;
-  background: #4A4A4A;
-  @include clearfix;
-}
-
-.footer-container {
-  @include clearfix;
-  margin: 0 auto;
-  width: 86%;
-
-  .footer-row {
-    // set width
+  background:#191919;
+  color:#fff;
+  margin:0;
+  .footer-top-spacing {
+    padding: 60px 0;
+  }
+  .footer-links {
+    width:100%;
+    padding: 20px 20px 20px 0;
+  }
+  .bottom-bar {
+    position:relative;
+    text-align:center;
+    font-size:.8em;
+    text-transform:uppercase;
+    background:#111;
+    padding:15px 0;
   }
 }
+// End
 
-@include breakpoint-1600-sm {
-  .footer-container {
-    width: 1580px;
-  }
+// footer container
+.centered {
+  margin: 0 20px;
 }
 
-// New Code
+// Desktop
+@include breakpoint-1200-sm {
+  footer {
+    .footer-top-spacing{
+      padding: 40px 0;
+    }
+    .footer-links {
+      width:20%;
+      padding: 20px 20px 20px 0;
+      &:first-child {
+        width: 15%;
+      }
+    }
+    .centered {
+      margin: 0px 40px;
+      padding: 20px 0;
+      @include display(flex);
+      @include clearfix;
+    }
+  }
+}

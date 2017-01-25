@@ -31,6 +31,7 @@
   overflow-y: auto;
   background: #414B52;
   overflow-x: hidden;
+  overflow-y: hidden;
   @include transition(all 0.5s ease);
 }
 // End

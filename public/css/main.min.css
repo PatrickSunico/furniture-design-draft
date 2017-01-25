@@ -20,9 +20,33 @@ html, body {
   width: 100%;
 }
 
-/* typography*/
+.section-spacing {
+  margin: 40px 20px;
+}
+
+.header {
+  margin: 20px 20px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .h1 {
+    font-size: 64px;
+  }
+  .header {
+    margin: 20px 40px;
+  }
+  .section-spacing {
+    margin: 60px 40px;
+  }
+  .section-spacing::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
 /* typography reset*/
-.h1, .h2, .h3, .h4, .h5, .h6, .p, a, p {
+.h1, .h2, .h3, .h5, .h6, .h6, .p, a, p {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -51,14 +75,32 @@ html, body {
   margin-bottom: 25px;
 }
 
-.h5 {
+.h4, .h5-showcase {
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 6vw;
+  margin-bottom: 20px;
+}
+
+.h5-showcase {
+  font-size: 4.2vw;
+}
+
+.h5, .h6 {
   color: #fff;
   font-size: 28px;
   font-weight: bolder;
   letter-spacing: 2.06px;
   text-transform: capitalize;
-  margin-bottom: 40px;
   text-align: left;
+}
+
+.h6 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 /* underlined style class*/
@@ -85,29 +127,24 @@ html, body {
   margin-bottom: 20px;
 }
 
-.section-spacing {
-  margin: 40px 20px;
+/* Typography */
+footer p {
+  padding: 10px 0;
 }
 
-.header {
-  margin: 20px 20px;
+footer p b {
+  font-size: 18px;
 }
 
-@media only screen and (min-width: 1600px) {
-  .h1 {
-    font-size: 64px;
-  }
-  .header {
-    margin: 20px 40px;
-  }
-  .section-spacing {
-    margin: 60px 40px;
-  }
-  .section-spacing::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
+footer a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+}
+
+footer a:hover {
+  color: #65c2ed;
 }
 
 #wrapper {
@@ -140,6 +177,7 @@ html, body {
   overflow-y: auto;
   background: #414B52;
   overflow-x: hidden;
+  overflow-y: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -217,19 +255,6 @@ html, body {
     position: relative;
     overflow-x: hidden;
   }
-}
-
-.showcase__heading, .manufacturer {
-  font-family: "Playfair Display", serif;
-  color: #fff;
-  text-transform: capitalize;
-  font-style: italic;
-  font-size: 6vw;
-  margin-bottom: 20px;
-}
-
-.manufacturer {
-  font-size: 4.2vw;
 }
 
 .cards {
@@ -446,10 +471,10 @@ html, body {
     bottom: 0;
     left: 0;
   }
-  .cards__item .showcase__heading, .cards__item .manufacturer {
+  .cards__item .h4, .cards__item .h5-showcase {
     font-size: 3vw;
   }
-  .cards__item .manufacturer {
+  .cards__item .h5-showcase {
     font-size: 2vw;
   }
   .cards__item .btn-position .ghost-button {
@@ -479,10 +504,10 @@ html, body {
     bottom: 0;
     left: 0;
   }
-  .cards__item .showcase__heading, .cards__item .manufacturer {
+  .cards__item .h4, .cards__item .h5-showcase {
     font-size: 2vw;
   }
-  .cards__item .manufacturer {
+  .cards__item .h5-showcase {
     font-size: 1.4vw;
   }
   .cards__item .btn-position .ghost-button {
@@ -533,10 +558,16 @@ html, body {
   font-size: 16px;
 }
 
+.custom-container .contact-button:hover {
+  background: #fff;
+  color: black;
+  -webkit-transition: 0.9s all;
+  transition: 0.9s all;
+}
+
 .google-maps {
   position: relative;
-  padding-bottom: 20%;
-  height: 0;
+  height: 420px;
   overflow: hidden;
   display: none;
 }
@@ -578,29 +609,57 @@ html, body {
 }
 
 footer {
-  padding: 40px 0;
-  background: #4A4A4A;
+  background: #191919;
+  color: #fff;
+  margin: 0;
 }
 
-footer::after {
-  clear: both;
-  content: "";
-  display: table;
+footer .footer-top-spacing {
+  padding: 60px 0;
 }
 
-.footer-container {
-  margin: 0 auto;
-  width: 86%;
+footer .footer-links {
+  width: 100%;
+  padding: 20px 20px 20px 0;
 }
 
-.footer-container::after {
-  clear: both;
-  content: "";
-  display: table;
+footer .bottom-bar {
+  position: relative;
+  text-align: center;
+  font-size: .8em;
+  text-transform: uppercase;
+  background: #111;
+  padding: 15px 0;
 }
 
-@media only screen and (min-width: 1600px) {
-  .footer-container {
-    width: 1580px;
+.centered {
+  margin: 0 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .footer-top-spacing {
+    padding: 40px 0;
+  }
+  footer .footer-links {
+    width: 20%;
+    padding: 20px 20px 20px 0;
+  }
+  footer .footer-links:first-child {
+    width: 15%;
+  }
+  footer .centered {
+    margin: 0px 40px;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .centered::after {
+    clear: both;
+    content: "";
+    display: table;
   }
 }
